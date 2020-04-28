@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'Lucida', 'Verdana', sans-serif;
+}
+body{
+	display: grid;
+  	grid-template-columns: 20% 60% 20%;
+	grid-template-rows: 150px auto 60px;
+	grid-template-areas: 
+		"my-aside my-header my-header"			
+        "my-aside my-section-result my-section-button"        
+		"my-footer my-footer my-footer";  	
+    margin: 0 auto;  
+    max-width: 1550px;	
+}
+header{
+	grid-area: my-header;	
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;  
+}
+hr{
+    height: 2px;
+    width: 100%;
+    background-color: darkgrey;
+}
+aside{
+	grid-area: my-aside;	
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    background: url('../img/cohete3.png');       
+    background-size: cover;
+    background-position: center;   
+}
+section#buttons{
+    grid-area: my-section-button;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+section#result{
+    grid-area: my-section-result;   
+    justify-content: start;    
+    font-size: 1.2rem;
+    color:rgb(36, 35, 35);
+    padding: 60px 0px 0px 60px;
+}
+footer{
+	grid-area: my-footer;			
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    background-color: darkgrey;
+}
+h1{
+    margin: 10px 0px;
+    color: white;
+    text-align: center;
+    font-size: 3.5em;
+    text-shadow: 0px 5px 10px black;
+}
+p{
+    font-size: 1.2em;
+    color:rgb(36, 35, 35);
+}
+.myButton{
+    margin: 6px;
+    width: 220px;
+    height: 45px; 
+    color:rgb(44, 44, 44);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 2px 5px grey;
+    cursor: pointer;
+}
+.myButton1{
+    background-color: #fdc793;    
+}
+.myButton2{
+    background-color: #fa9d46;    
+}
+.myButton3{
+    background-color: #fd3b00;    
+}
+.myButton4{
+    background-color: #d40000;    
+}
+#printResult{
+    display: flex;
+	flex-direction: row;
+	justify-content: start;    
+}

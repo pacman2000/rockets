@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rockets</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+
+        <script src="../models/rocket.js"></script>
+        <script src="../models/thruster.js"></script>
+        <script src="../controllers/controller.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>ROCKETS</h1>
+            <br>
+            <hr>
+        </header>
+        <aside>
+        </aside>
+        <section id="buttons">            
+            <button id="rocket1" class="myButton myButton1" onclick="createRocketOne()">Create ROCKET 1</button>
+            <button id="rocket2" class="myButton myButton1" onclick="createRocketTwo()">Create ROCKET 2</button>
+            <button id="acceler1" class="myButton myButton2" onclick="accelerateRocketOne()">Accelerate ROCKET 1</button>
+            <button id="acceler2" class="myButton myButton2" onclick="accelerateRocketTwo()">Accelerate ROCKET 2</button>
+            <button id="brake1" class="myButton myButton3" onclick="brakeRocketOne()">Brake ROCKET 1</button>
+            <button id="brake2" class="myButton myButton3" onclick="brakeRocketTwo()">Brake ROCKET 2</button>
+            <button id="print1" class="myButton myButton4" onclick="printRocketOne()">Print ROCKET 1</button>
+            <button id="print2" class="myButton myButton4" onclick="printRocketTwo()">Print ROCKET 2</button>
+            <button id="printAll" class="myButton myButton4" onclick="printAllRockets()">Print ALL ROCKETS</button>   
+        </section>        
+        <section id="result">
+            <div id="printResult"></div>            
+        </section>
+        <footer>
+        </footer>
+    </body>
+</html>
