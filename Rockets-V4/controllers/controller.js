@@ -196,12 +196,14 @@ function printRocketTwo() {
 function printAllRockets() {
     cleanField();
     var i = 0;
+    var currentPower;
     while (i < rockets.length) {
         rocketId = rockets[i].getId;
         qThruster = rockets[i].thrusters.length;
         thrusterValue = printThruster(rockets[i]);
+        currentPower = rockets[i].getCurrentPower;
         speedValue = speed(rockets[i]);
-        parag.innerHTML += "Rocket  " + rocketId + " has " + qThruster + " thrusters with max power: " + thrusterValue + " \n            <br>Speed " + speedValue + " <br><br>";
+        parag.innerHTML += "Rocket  " + rocketId + " has " + qThruster + " thrusters with max power: " + thrusterValue + " \n            <br>Current power " + currentPower + "\n            <br>Speed " + speedValue + " <br><br>";
         i++;
     }
     document.getElementById("printResult").appendChild(parag);

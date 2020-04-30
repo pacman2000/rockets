@@ -229,13 +229,17 @@ function printRocketTwo(){
 function printAllRockets(){
     cleanField(); 
     let i: number = 0;
+    let currentPower; 
+
     while (i < rockets.length){  
         rocketId = rockets[i].getId;    
         qThruster = rockets[i].thrusters.length;  
         thrusterValue =  printThruster(rockets[i]); 
+        currentPower = rockets[i].getCurrentPower; 
         speedValue =  speed(rockets[i]);       
         
         parag.innerHTML += `Rocket  ${rocketId} has ${qThruster} thrusters with max power: ${thrusterValue} 
+            <br>Current power ${currentPower}
             <br>Speed ${speedValue} <br><br>`;         
         i++
     }  
