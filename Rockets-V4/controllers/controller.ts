@@ -54,9 +54,9 @@ function createRocketOne(){
     (<HTMLInputElement>document.getElementById("printResult")).appendChild(parag);  
  
     // verify results in console ///////////////////
-    console.log(rocket1);
+    /* console.log(rocket1);
     console.log(qThruster); 
-    console.log(rockets);
+    console.log(rockets); */
            
 }
 function createRocketTwo(){
@@ -126,10 +126,9 @@ function accelerateRocketOne(){
     cleanField(); 
     rocket = rocket1;
     rocketId = rocket1.getId;
-    let sum = sumPower(rocket);  
-    let currentPower = rocket.getCurrentPower;  
-
-    rocket.accelerate(sum);     
+    let sum = sumPower(rocket);    
+    rocket.accelerate(sum);  
+    let currentPower = rocket.getCurrentPower;     
     
     if(currentPower >= sum ){
         parag.innerHTML = `Rocket  ${rocketId} <br>Current power: ${currentPower} <br>
@@ -139,15 +138,17 @@ function accelerateRocketOne(){
     }
 
     (<HTMLInputElement>document.getElementById("printResult")).appendChild(parag);  
+    console.log(rockets);
+    console.log(currentPower);
+    
 }
 function accelerateRocketTwo(){    
     cleanField(); 
     rocket = rocket2;
     rocketId = rocket2.getId;
     let sum = sumPower(rocket);    
-    let currentPower = rocket.getCurrentPower;    
-
-    rocket.accelerate(sum);     
+    rocket.accelerate(sum); 
+    let currentPower = rocket.getCurrentPower;        
     
     if(currentPower >= sum ){
         parag.innerHTML = `Rocket  ${rocketId} <br>Current power: ${currentPower} <br>
@@ -162,9 +163,8 @@ function brakeRocketOne(){
     cleanField(); 
     rocket = rocket1;
     rocketId = rocket1.getId;
-    let currentPower = rocket.getCurrentPower;
-
     rocket.brake();  
+    let currentPower = rocket.getCurrentPower;
 
     if(currentPower <= 0){
         parag.innerHTML = `Rocket  ${rocketId} <br>Current power: ${currentPower} <br>
@@ -179,9 +179,8 @@ function brakeRocketTwo(){
     cleanField(); 
     rocket = rocket2;
     rocketId = rocket2.getId;
-    let currentPower = rocket.getCurrentPower;
-
     rocket.brake();  
+    let currentPower = rocket.getCurrentPower;
 
     if(currentPower <= 0){
         parag.innerHTML = `Rocket  ${rocketId} <br>Current power: ${currentPower} <br>

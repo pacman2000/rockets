@@ -48,9 +48,9 @@ function createRocketOne() {
     parag.innerHTML = "Rocket  " + rocketId + " has " + qThruster + " thrusters with max power: " + thrusterValue + " ";
     document.getElementById("printResult").appendChild(parag);
     // verify results in console ///////////////////
-    console.log(rocket1);
+    /* console.log(rocket1);
     console.log(qThruster);
-    console.log(rockets);
+    console.log(rockets); */
 }
 function createRocketTwo() {
     cleanField();
@@ -114,8 +114,8 @@ function accelerateRocketOne() {
     rocket = rocket1;
     rocketId = rocket1.getId;
     var sum = sumPower(rocket);
-    var currentPower = rocket.getCurrentPower;
     rocket.accelerate(sum);
+    var currentPower = rocket.getCurrentPower;
     if (currentPower >= sum) {
         parag.innerHTML = "Rocket  " + rocketId + " <br>Current power: " + currentPower + " <br>\n        <br>You have achieved the max power";
     }
@@ -123,14 +123,16 @@ function accelerateRocketOne() {
         parag.innerHTML = "Rocket  " + rocketId + " <br>Current power: " + currentPower + "  ";
     }
     document.getElementById("printResult").appendChild(parag);
+    console.log(rockets);
+    console.log(currentPower);
 }
 function accelerateRocketTwo() {
     cleanField();
     rocket = rocket2;
     rocketId = rocket2.getId;
     var sum = sumPower(rocket);
-    var currentPower = rocket.getCurrentPower;
     rocket.accelerate(sum);
+    var currentPower = rocket.getCurrentPower;
     if (currentPower >= sum) {
         parag.innerHTML = "Rocket  " + rocketId + " <br>Current power: " + currentPower + " <br>\n        <br>You have achieved the max power";
     }
@@ -143,8 +145,8 @@ function brakeRocketOne() {
     cleanField();
     rocket = rocket1;
     rocketId = rocket1.getId;
-    var currentPower = rocket.getCurrentPower;
     rocket.brake();
+    var currentPower = rocket.getCurrentPower;
     if (currentPower <= 0) {
         parag.innerHTML = "Rocket  " + rocketId + " <br>Current power: " + currentPower + " <br>\n        <br>Power cannot be less than 0";
     }
@@ -157,8 +159,8 @@ function brakeRocketTwo() {
     cleanField();
     rocket = rocket2;
     rocketId = rocket2.getId;
-    var currentPower = rocket.getCurrentPower;
     rocket.brake();
+    var currentPower = rocket.getCurrentPower;
     if (currentPower <= 0) {
         parag.innerHTML = "Rocket  " + rocketId + " <br>Current power: " + currentPower + " <br>\n        <br>Power cannot be less than 0";
     }
